@@ -17,7 +17,7 @@ class RomanNumeralsSpec extends ObjectBehavior
     }
 
     /**
-     * factorization tests
+     * conversion tests up to 20
      */
     function it_converts_1_as_I(){
         $this->convert(1)->shouldReturn('I');
@@ -97,5 +97,28 @@ class RomanNumeralsSpec extends ObjectBehavior
 
     function it_converts_20_as_XVI(){
         $this->convert(20)->shouldReturn('XX');
+    }
+
+    /**
+     * complex conversion tests
+     */
+    function it_converts_44_as_XLIV(){
+        $this->convert(44)->shouldReturn('XLIV');
+    }
+
+    function it_converts_78_as_LXXVIII(){
+        $this->convert(78)->shouldReturn('LXXVIII');
+    }
+
+    function it_converts_99_as_XCIX(){
+        $this->convert(99)->shouldReturn('XCIX');
+    }
+
+    function it_converts_127_as_CXXVII(){
+        $this->convert(127)->shouldReturn('CXXVII');
+    }
+
+    function it_converts_483_as_CDLXXXIII(){
+        $this->convert(483)->shouldReturn('CDLXXXIII');
     }
 }
