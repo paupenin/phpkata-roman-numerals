@@ -38,4 +38,64 @@ class RomanNumeralsSpec extends ObjectBehavior
     function it_converts_5_as_V(){
         $this->convert(5)->shouldReturn('V');
     }
+
+    function it_converts_6_as_VI(){
+        $this->convert(6)->shouldReturn('VI');
+    }
+
+    function it_converts_7_as_VII(){
+        $this->convert(7)->shouldReturn('VII');
+    }
+
+    function it_converts_8_as_VIII(){
+        $this->convert(8)->shouldReturn('VIII');
+    }
+
+    function it_converts_9_as_IX(){
+        $this->convert(9)->shouldReturn('IX');
+    }
+
+    function it_converts_10_as_X(){
+        $this->convert(10)->shouldReturn('X');
+    }
+
+    function it_converts_11_as_XI(){
+        $this->convert(11)->shouldReturn('XI');
+    }
+
+    function it_converts_12_as_XII(){
+        $this->convert(12)->shouldReturn('XII');
+    }
+
+    function it_converts_13_as_XIII(){
+        $this->convert(13)->shouldReturn('XIII');
+    }
+
+    function it_converts_14_as_XIV(){
+        $this->convert(14)->shouldReturn('XIV');
+    }
+
+    function it_converts_15_as_XV(){
+        $this->convert(15)->shouldReturn('XV');
+    }
+
+    function it_converts_16_as_XVI(){
+        $this->convert(16)->shouldReturn('XVI');
+    }
+
+    function it_converts_17_as_XVI(){
+        $this->convert(17)->shouldReturn('XVII');
+    }
+
+    function it_converts_18_as_XVI(){
+        $this->convert(18)->shouldReturn('XVIII');
+    }
+
+    function it_converts_19_as_XVI(){
+        $this->convert(19)->shouldReturn('XIX');
+    }
+
+    function it_converts_20_as_XVI(){
+        $this->convert(20)->shouldReturn('XX');
+    }
 }
