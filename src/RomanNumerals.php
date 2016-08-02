@@ -3,6 +3,16 @@
 class RomanNumerals
 {
     /**
+     * String values for key numers
+     * @var array
+     */
+    protected static $table = [
+        5   => 'V',
+        4   => 'IV',
+        1   => 'I'
+    ];
+
+    /**
      * Convert integer to roman numeral string
      * @param  integer $num
      * @return string
@@ -11,18 +21,12 @@ class RomanNumerals
     {
         $roman = '';
 
-        if($num == 5){
-            $roman .= 'V';
-            $num -= $num;
-        }
-
-        if($num == 4){
-            $roman .= 'IV';
-            $num -= $num;
-        }
-
-        for(; $num >= 1; $num--){
-            $roman .= 'I';
+        foreach(static::$table as $key => $glyph)
+        {
+            for(; $num >= $key; $num -= $key)
+            {
+                $roman .= $glyph;
+            }
         }
 
         return $roman;
