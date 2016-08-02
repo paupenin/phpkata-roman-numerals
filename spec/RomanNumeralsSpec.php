@@ -121,4 +121,24 @@ class RomanNumeralsSpec extends ObjectBehavior
     function it_converts_483_as_CDLXXXIII(){
         $this->convert(483)->shouldReturn('CDLXXXIII');
     }
+
+    function it_converts_891_as_DCCCXCI(){
+        $this->convert(891)->shouldReturn('DCCCXCI');
+    }
+
+    function it_converts_999_as_CMXCIX(){
+        $this->convert(999)->shouldReturn('CMXCIX');
+    }
+
+    function it_converts_1115_as_MCXV(){
+        $this->convert(1115)->shouldReturn('MCXV');
+    }
+
+    function it_converts_1989_as_MCMLXXXIX(){
+        $this->convert(1989)->shouldReturn('MCMLXXXIX');
+    }
+
+    function it_converts_2016_as_MMXVI(){
+        $this->convert(2016)->shouldReturn('MMXVI');
+    }
 }
