@@ -24,11 +24,25 @@ class RomanNumerals
 
     /**
      * Convert integer to roman numeral string
-     * @param  integer $num
-     * @return string
+     * @param  integer | string $num
+     * @return string | integer
      */
     public function convert($num)
     {
+        if( is_numeric($num) ){
+           return $this->toRoman($num);
+        }
+        if( is_string($num) ){
+           return $this->toNumeric($num);
+        }
+    }
+
+    /**
+     * Convert number to roman string
+     * @param  integer $num
+     * @return string
+     */
+    private function toRoman($num){
         $roman = '';
 
         foreach(static::$table as $key => $glyph)
@@ -40,5 +54,23 @@ class RomanNumerals
         }
 
         return $roman;
+    }
+
+    /**
+     * Convert roman string to numeric
+     * @param  string $roman
+     * @return integer
+     */
+    private function toNumeric($roman){
+        $num = 0;
+
+        foreach(static::$table as $key => $glyph)
+        {
+            for(; substr($roman, 0, strlen($glyph)) == $glyph; $roman = substr($roman, strlen($glyph)) ){
+                $num += $key;
+            }
+        }
+
+        return $num;
     }
 }

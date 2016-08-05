@@ -141,4 +141,47 @@ class RomanNumeralsSpec extends ObjectBehavior
     function it_converts_2016_as_MMXVI(){
         $this->convert(2016)->shouldReturn('MMXVI');
     }
+
+    /**
+     * complex roman conversion tests
+     */
+    function it_converts_XLIV_as_44(){
+        $this->convert('XLIV')->shouldReturn(44);
+    }
+
+    function it_converts_LXXVIII_as_78(){
+        $this->convert('LXXVIII')->shouldReturn(78);
+    }
+
+    function it_converts_XCIX_as_99(){
+        $this->convert('XCIX')->shouldReturn(99);
+    }
+
+    function it_converts_CXXVII_as_127(){
+        $this->convert('CXXVII')->shouldReturn(127);
+    }
+
+    function it_converts_CDLXXXIII_as_483(){
+        $this->convert('CDLXXXIII')->shouldReturn(483);
+    }
+
+    function it_converts_DCCCXCI_as_891(){
+        $this->convert('DCCCXCI')->shouldReturn(891);
+    }
+
+    function it_converts_CMXCIX_as_999(){
+        $this->convert('CMXCIX')->shouldReturn(999);
+    }
+
+    function it_converts_MCXV_as_1115(){
+        $this->convert('MCXV')->shouldReturn(1115);
+    }
+
+    function it_converts_MCMLXXXIX_as_1989(){
+        $this->convert('MCMLXXXIX')->shouldReturn(1989);
+    }
+
+    function it_converts_MMXVI_as_2016(){
+        $this->convert('MMXVI')->shouldReturn(2016);
+    }
 }
